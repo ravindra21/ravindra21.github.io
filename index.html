@@ -184,6 +184,7 @@ small[prof="90"] {
 /*------------ Contact me -----------*/
 .contact .fa {
   font-size: 20pt;
+  margin-right: 16px;
 }
 .contact .info {
   margin-left: 8pt;
@@ -382,6 +383,7 @@ small[prof="90"] {
 <script>
   //alert("this resume still in development");
 $(document).ready(function(){
+  new WOW().init();
   $(".preloader").fadeOut();
   $(".nav-link").click(function(e){
     var link = $(this).attr("href");
@@ -396,7 +398,7 @@ $(document).ready(function(){
     $(".navbar").fadeToggle(500);
   })
 })
-new WOW().init();
+//new WOW().init();
 </script>
   </body>
 </html>
