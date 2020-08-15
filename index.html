@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <style>
+* {
+  margin: 0px;
+  padding:0px;
+ }
+body {
+  font-family: arial, helvetica, "sans-serif";
+}
+body, .skill span {
+  background-color: #211F1F;
+  color: white;
+}
+h1 {
+  font-size: 26px;
+}
+h2,h3 {
+  color: orange;    
+}
+body > section > h2 , footer > h2{
+  font-style:italic;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.nav-icon, .nav-toggle {
+  font-size: 32px;
+  padding: 8px;
+  padding-right: 12px;
+  background-color: black;
+  border-radius: 0px 0px 8px 0px;  
+}
+.nav-icon {
+  position: fixed;
+  z-index: 777;
+}
+.nav-mask{
+  position: fixed;
+  z-index: 777;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.nav-menu{
+  position: fixed;
+  z-index: 888;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  transition: width 1s ease;
+}
+.nav-menu li {
+  padding: 8pt;
+  list-style: none;
+}
+.nav-menu li a{
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 200;
+  color: orange;
+}
+/* -------------- banner -------------*/
+.banner {
+  padding-top: 80px;
+  padding-bottom:120px;
+  background: url(https://user-images.githubusercontent.com/26089535/89418577-74831e80-d75a-11ea-8d89-cdbc263422b9.jpg) no-repeat left center fixed;
+  --webkit-background-size: cover;
+  --moz-background-color: cover;
+  background-size: cover;
+}
+.about, .skill, .portfolio, .contact{
+  margin-top: 80px ;
+  padding-bottom: 80px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.banner img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 150px;
+  height:150px;
+  border-radius: 50%;
+}
+.banner h3, .banner h1, .banner p {
+  text-align: center;
+}
+.banner h3 > small {
+  vertical-align: super;
+  font-weight: lighter;
+  font-size: 14px;
+}
+/*--------------- about ------------*/
+.about .summary {
+  font-size: 13pt;
+  padding: 0px 8pt;
+}
+.about .info {
+  display: inline-block ;
+  margin-bottom: 10pt;
+}
+.point, .point-light {
+  color: orange;
+}
+.point {
+  fonnt-weight: bold;
+  font-size: 15pt;
+}
+.point-light {
+  font-size: 13pt;
+  font-weight: 200;
+}
+/* -------------- portfolio -------------*/
+.gallery {
+  margin: auto;
+}
+.gallery img {
+  display: block;
+  float: left;
+  background-color: white;
+  margin: 1%;
+  height: 150px;
+}
+.big{
+  width:50%;
+}
+.small {
+  width: 46%;
+}
+/* -------------- Skill -------------*/
+.skill li {
+  /*border: 1px solid red;*/
+  margin-top: 20px;
+  list-style: none;
+}
+.skill small {
+  display: inline-block;
+  background-color: orange;
+  border-radius: 10px;
+  margin-left: 7px;
+  padding-top: 2px;
+  text-align: center;
+}
+.skill span {
+  left:-10px;
+  padding-left: 10px;
+  position:relative;
+  z-index: 1;
+}
+small[prof="80"] {
+  width: 70%;
+}
+small[prof="70"] {
+  width: 60%;
+}
+small[prof="50"] {
+  width: 40%;
+}
+small[prof="75"] {
+  width: 65%;
+}
+small[prof="90"] {
+  width: 80%;
+}
+/*------------ Contact me -----------*/
+.contact .fa {
+  font-size: 20pt;
+}
+.contact .info {
+  margin-left: 8pt;
+}
+.contact > div{
+  margin: 12pt 4pt;
+}
+.contact > div:first{
+  margin-top: 0pt;
+}
+.contact > div:last {
+  margin-bottom: 0pt;
+}
+.contact a {
+  color: orange;
+  text-decoration: none;
+}
+/* -------------- etc -------------*/
+.hide{
+  display: none;
+}
+.clear {
+  clear: both;
+}
+.last-line {
+  border-bottom: 3px solid orange; 
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  color: black;
+}
+.preloader .loading {
+  margin: auto;
+  margin-top: 50%;
+  width: 70%;
+  text-align: center;
+  font-size: 24pt;
+}
+.loading .fa {
+  font-size: 36pt;
+  color: green;
+}
+.loading > h1 {
+  margin-top: 16pt;
+}
+    </style>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="loading">
+      <span class="fa fa-spinner fa-spin"></span>
+      <h1 class="animated bounceIn infinite">wait a minute</h1>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-icon">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="navbar">
+        <div class="nav-mask"></div>
+        <ul class="nav-menu">
+          <li class="nav-toggle"><i class="fa fa-arrow-left"></i></li>
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About Me</a></li>
+          <li><a class="nav-link" href="#skill">Skills</a></li>
+          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="banner">
+      <img src="https://avatars3.githubusercontent.com/u/26089535?s=400&u=382adb0e749e3a97429d3fd0c3f927dac5358bad&v=4" alt="photo" />
+      <h1>Ravindra Setya Alkahfi</h1>
+      <h3>
+        QA tester at Solusindo karya
+        <small> - since 2019 </small>
+      </h3>
+      <p>
+        web developer - manual tester - content writer
+      </p>
+    </section>
+
+    <section id="about" class="about wow fadeInUp slow">
+      <h2> <small style="color:white"> I'm</small> 22 Years old</h2>
+      <p class="summary">
+<span class="info">I worked at <i class="point">Solusindo Karya Utama</i> from <span class="point-light">December 2019 to May 2020</span> as a manual tester in BCA project web application.<br></span>
+
+<span class="info">Alumni at <i class="point">SMKN 2 Pengasih</i> majoring in Computer Network Engineering with <span class="point-light">343.5 IPK.</span><br></span>
+
+<span class="info">My hobby is listening to <span class="point-light">music</span> and watching <span class="point-light">movies.</span><br></span>
+
+<span class="info">Now i Live in <span class="point-light">Pura L7 no 4 Tajurhalang, Bogor, West Java - indonesia</span></span>
+      </p>
+    </section>
+
+    <section id="skill" class="skill wow fadeIn slower">
+      <h2> My Skills </h2>
+      <ul>
+        <li>
+          <p>
+            <span>Laravel </span>
+            <small class="wow fadeInLeft" prof="80"> 80% </small>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Jquery </span>
+            <small class="wow fadeInLeft" prof="70">70%</small>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Bootstrap </span>
+            <small prof="80" class="wow fadeInLeft">80%</small>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>React js </span>
+            <small prof="50" class="wow fadeInLeft">50%</small>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Sql </span>
+            <small prof="75" class="wow fadeInLeft">75%</small>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>html </span>
+            <small prof="90" class="wow fadeInLeft">90%</small>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <h2 class="wow fadeInLeft slow"> check my portfolio </h2>
+      <div class="gallery wow fadeInLeft">
+        <a href="https://code.sololearn.com/WY3Ftn8H5FT9/?ref=app">
+          <img alt="project1" class="big" src="https://user-images.githubusercontent.com/26089535/89911373-8ca3e380-dc1b-11ea-9580-fa8ece6a4b40.png" />
+        </a>
+        <a href="https://code.sololearn.com/WRpPy9LCtffT/?ref=app">
+          <img alt="project2" class="small" src="https://user-images.githubusercontent.com/26089535/89912098-5dda3d00-dc1c-11ea-9c02-539b923cb4a9.png" />
+        </a>
+        <br class="clear" />
+        <a href="https://code.sololearn.com/Wo1O49Hw3H9l/?ref=app">
+          <img alt="project3" class="small" src="https://user-images.githubusercontent.com/26089535/89915701-e4911900-dc20-11ea-8402-261b50c532ff.jpg"/>
+        </a>
+        <a href="https://code.sololearn.com/Wq24gT6YhmY8/?ref=app">
+        <img alt="project4" class="big" src="https://user-images.githubusercontent.com/26089535/90275014-d0048900-de8b-11ea-9666-95e0fe9a42dc.png
+" />
+        </a>
+        <br class="clear" />
+      </div>
+    </section>
+
+    <footer id="contact" class="contact wow fadeInUp slow">
+      <h2> Contact me at </h2>
+      <div>
+      <i class="fa fa-envelope"></i>
+      <span class="info">email : </span> ravind.alkahfi@yahoo.co.id
+      </div>
+      <div>
+        <i class="fa fa-whatsapp"></i>
+        <span class="info">whatsapp : </span>
+        +6281316817991
+      </div>
+      <div>
+        <i class="fa fa-newspaper-o"></i>
+        <span class="info">blog : </span>
+        <a href="https://vikaku21.blogspot.com">
+          https://vikaku21.blogspot.com
+        </a>
+      </div>
+      <div>
+        <i class="fa fa-github"></i>
+        <span class="info">github : </span>
+        <a href="https://github.com/ravindra21">
+          https://github.com/ravindra21
+        </a>
+      </div>
+    </footer>
+    <div class="last-line"></div>
+    
+<script>
+  //alert("this resume still in development");
+$(document).ready(function(){
+  $(".preloader").fadeOut();
+  $(".nav-link").click(function(e){
+    var link = $(this).attr("href");
+    $('html, body').animate({
+      scrollTop: $(link).offset().top - 100
+    }, 1000);
+    e.preventDefault();
+  })
+  $(".navbar").hide();
+  $(".nav-icon, .navbar a, .nav-mask, .nav-toggle").click(function(e){
+    $(".nav-icon").fadeToggle ();
+    $(".navbar").fadeToggle(500);
+  })
+})
+new WOW().init();
+</script>
+  </body>
+</html>
