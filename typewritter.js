@@ -32,19 +32,19 @@
     var length;
     
     $target.html(function (_, html) {
-      //length = html.length;
-      //return html.substr(0, length - 1);
-      return '';
+      length = html.length;
+      return html.substr(0, length - 1);
+      //return '';
     });
     
-    /*if (length > 1) {
+    if (length > 1) {
       setTimeout(function () {
         deleteString($target, delay, cb);
       }, delay);
     }
-    else {*/
+    else {
       cb();
-    //}
+    }
   }
 
   // jQuery hook
