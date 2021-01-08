@@ -25,6 +25,7 @@ $("#skill img").each(function(index){
 });
 
 $(document).ready(function(){
+	AOS.init();
 	$('.typewritter').teletype({
 	  text: [
 	    'nama saya ravindra setya alkahfi',

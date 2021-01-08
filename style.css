@@ -348,6 +348,9 @@ padding-left:90px;
 
 	#portfolio .card {
 		margin-bottom: 3rem;
+		/*CSS animations*/
+		-webkit-animation: none;
+		animation: none;
 	}
 	#experience {
 		padding-right: 2rem;
