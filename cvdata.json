@@ -1,0 +1,80 @@
+{
+	"education" : [
+		{
+			"from" : 2004,
+			"to" : 2010,
+			"name" : "Sdn 14 Cengkareng",
+			"ipk" : 123.14
+		},
+		{
+			"from" : 2010,
+			"to" : 2013,
+			"name" : "smpn 4 wates",
+			"ipk" : 123.2
+		},
+		{
+			"from" : 2013,
+			"to" : 2016,
+			"name" : "smkn 2 pengasih",
+			"ipk" : 123.2
+		}
+	],
+	"experience" : [
+		{
+			"from" : 2016,
+			"to" : 2017,
+			"name" : "cleaning service",
+			"company" : "i forget the company name",
+			"desc" : "bersih - bersih bangke"
+		},
+		{
+			"from" : 2016,
+			"to" : 2017,
+			"name" : "cleaning service",
+			"company" : "i forget the company name",
+			"desc" : "bersih - bersih bangke"
+		}
+	],
+	"contact" : [
+		{
+			"icon" : "fa fa-whatsapp fa-small",
+			"info" : "+6281316817991"
+		},
+		{
+			"icon" : "fa fa-linkedin fa-small",
+			"info" : "linkedin.com/ravindra21"
+		}
+	],
+	"skill" : [
+		{
+			"name" : "react js",
+			"icon" : "someicon.png"
+		},
+		{
+			"name" : "express",
+			"icon" : "someicon.png"
+		},
+		{
+			"name" : "codeigniter",
+			"icon" : "someicon.png"
+		}
+	],
+	"portfolio" : [
+		{
+			"name" : "sample portfolio",
+			"tech" : ["reactjs", "sql", "express"],
+			"desc" : "its just sample portfolio dude",
+			"url" : "somesite.com"
+		}
+	],
+	"profile" : {
+		"picture" : "somepict.com",
+		"background" : "someback.com"
+	},
+	"biodata" : {
+		"birth" : "jakarta 21 january 1998",
+		"age" : 22,
+		"status" : "jomblo",
+		"gender" : "pria",
+	}
+}
