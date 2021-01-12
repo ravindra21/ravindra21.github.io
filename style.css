@@ -93,9 +93,12 @@ h3 {
 	padding-bottom: 1rem;
 	font-size: 16px;
 }
+#skill a {
+	margin: .5rem;
+	display: inline-block;
+}
 #skill img {
 	width: 45px;
-	margin: .5rem;
 }
 #experience {
 	padding: 3rem;

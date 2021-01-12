@@ -1,7 +1,15 @@
+/**
+ * functions
+ */
+
 function toggleSidebar() {
 	$('#sidebar').toggle();
 	$('.overlay').toggle();	
 }
+
+/**
+ * Effect that must be apply before all document loaded
+ */
 $('#navbtn').click(function() {
 	toggleSidebar();
 });
@@ -24,6 +32,9 @@ $("#skill img").each(function(index){
 	});
 });
 
+/**
+ * effect aplied when document already loaded
+ */
 $(document).ready(function(){
 	AOS.init();
 	$('.typewritter').teletype({
@@ -32,7 +43,7 @@ $(document).ready(function(){
 	    'umur saya 22 tahun',
 	  ]
 	});
-
+	$("body").tooltip({ selector: '[data-toggle=tooltip]' });
 	$("#portfolio .card").addClass('flip-in-ver-right');
 	$("#p-photo").addClass('scale-in-center');
 	$('#skill img').addClass('swirl-in-fwd');

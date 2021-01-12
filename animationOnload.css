@@ -124,3 +124,32 @@
 	-webkit-animation: fade-in-bg 5s ease-out both infinite;
 	        animation: fade-in-bg 5s ease-out both infinite;
 }
+
+/**
+ * TRANSITION EFFECT
+ **/
+#dbutton:hover, #portfolio .card:hover, #contact li:hover {
+  -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1) !important;
+  transition: 100ms linear;
+}
+#dbutton:active, #portfolio .card:active, #contact li:active {
+  -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          transform: scale(0.9) !important;
+  transition: 100ms linear;
+}
+#contact li span {
+  border-bottom: 1px solid transparent; /* this */
+}
+#contact li span:hover {
+  border-bottom: 1px solid grey;
+  transition: border-color 500ms linear;
+}
+#skill img:hover {
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(30deg) scale(1.2) !important;
+  transition: 2000ms ease-out both;
+}
