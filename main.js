@@ -47,4 +47,5 @@ $(document).ready(function(){
 	$("#portfolio .card").addClass('flip-in-ver-right');
 	$("#p-photo").addClass('scale-in-center');
 	$('#skill img').addClass('swirl-in-fwd');
+	$('#loader').css({'display':'none'});
 });

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap');
 
+body, html {
+	margin: 0px;
+}
 body .container-fluid {
 	padding-left: 0px;
 }
@@ -160,16 +163,21 @@ ul.subtimeline > li:before {
 
 #certification .card {
 	border:0;
-	padding: 0px;
 }
 
 
 #certification .card .card-img-top{
-	width: 64px;
-	height: 64px;
+	
 }
 
-
+#social-media a {
+	display: inline-block;
+}
+#social-media a img, #social-media a{
+	border-radius: 50%;
+	width: 50px;
+	margin-left: 1rem;
+}
 
 .timeline {
 	list-style: none;
@@ -404,5 +412,12 @@ padding-left:90px;
 		border-right-width: 14px;
 		left: -14px;
 		right: auto;
+	}
+	#certification .card {
+		margin-bottom: 3rem;
+	}
+	#social-media {
+		padding-top: 0px;
+		margin-top: 0px;
 	}
 }
