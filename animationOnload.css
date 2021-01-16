@@ -115,37 +115,40 @@
 }
 
 @keyframes fade-in-bg {
-    0%,100%     {background-color:#f8f8f8;}
-    50.0%  {background-color:#f3f3f3;}
-    75.0%  {background-color:white;}
+    0%,31%,100% {background-image: url('bg1.png');}
+    /*16% { background-image: url('bg1.png');}*/
+    33%,64% { background-image: url('bg2.png');}
+    /*48% { background-image: url('bg2.png');}*/
+    66%,98% { background-image: url('flaten.png');}
+    /*80% { background-image: url('bg3.png');}*/
 }
 
 .fade-in-bg {
-	-webkit-animation: fade-in-bg 5s ease-out both infinite;
-	        animation: fade-in-bg 5s ease-out both infinite;
+	-webkit-animation: fade-in-bg 180s ease-out both infinite;
+	        animation: fade-in-bg 180s ease-out both infinite;
 }
 
 /**
  * TRANSITION EFFECT
  **/
 #dbutton:hover, #portfolio .card:hover, #contact li:hover {
-  -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-          transform: scale(1.1) !important;
+  -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          transform: scale(1.05) !important;
   transition: 100ms linear;
 }
 #dbutton:active, #portfolio .card:active, #contact li:active {
-  -webkit-transform: scale(0.9);
-          -ms-transform: scale(0.9);
-          transform: scale(0.9) !important;
+  -webkit-transform: scale(0.98);
+          -ms-transform: scale(0.98);
+          transform: scale(0.98) !important;
   transition: 100ms linear;
 }
 #contact li span {
   border-bottom: 1px solid transparent; /* this */
 }
 #contact li span:hover {
-  border-bottom: 1px solid grey;
-  transition: border-color 500ms linear;
+  border-bottom: 1px solid orange;
+  transition: border-color 200ms linear;
 }
 #skill img:hover {
   -webkit-transform: rotate(40deg);
