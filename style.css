@@ -116,6 +116,9 @@ h3 {
 #portfolio .card {
 	border: unset;
 }
+#portfolio .card a:hover {
+	text-decoration: none;
+}
 #portfolio .card .badge {
 	font-family: 'Amiko';
 	padding: .5rem;
