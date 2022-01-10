@@ -84,6 +84,6 @@
 /*$('.typewritter').teletype({
   text: [
     'nama saya ravindra setya alkahfi',
-    'umur saya 22 tahun',
+    'umur saya 23 tahun',
   ]
 });*/
